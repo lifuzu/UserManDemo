@@ -23,7 +23,34 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         var defaultACL = PFACL.ACL()
         defaultACL.setPublicReadAccess(true)
         PFACL.setDefaultACL(defaultACL, withAccessForCurrentUser: true)
+
+        // Register for push notifications
+        application.registerForRemoteNotificationTypes(UIRemoteNotificationType.Badge |
+                                                       UIRemoteNotificationType.Alert |
+                                                       UIRemoteNotificationType.Sound
+                                                       )
         return true
+    }
+
+    func application(application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: NSData) {
+        // Store the deviceToken in the current installation and save it to Parse.
+        var currentInstallation = PFInstallation.currentInstallation()
+        currentInstallation.setDeviceTokenFromData(deviceToken)
+        currentInstallation.channels = ["global"]
+        currentInstallation.saveInBackground()
+    }
+
+    func application(application: UIApplication!, didReceiveRemoteNotification userInfo: NSDictionary!) {
+
+        /*var notification:NSDictionary = userInfo.objectForKey("aps") as NSDictionary
+
+        if notification.objectForKey("content-available"){
+            if notification.objectForKey("content-available").isEqualToNumber(1){
+                NSNotificationCenter.defaultCenter().postNotificationName("reloadTimeline", object: nil)
+            }
+        }else{*/
+            PFPush.handlePush(userInfo)
+        //}
     }
 
     func applicationWillResignActive(application: UIApplication!) {

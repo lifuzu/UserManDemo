@@ -3,7 +3,7 @@ Demo Parse Functions Using Swift/iOS 8/Xcode 6 Beta 5
 
 ### Functions Supported:
 User Management: Register | Sign In | Sign Out | Reset password
-
+Notification Send | Receive
 
 ### Here is the steps you need to run before opening the project/workspace:
 *1*. Download Parse SDK
@@ -54,4 +54,6 @@ Then paste the following inside the application:didFinishLaunchingWithOptions: f
 
 ### References:
 1. https://www.parse.com/apps/quickstart?app_id=noapp--8#parse_data/mobile/ios/native/existing
-2. https://medium.com/@kirualex/cocoapods-with-swift-e6f8ba8f0afc - How to create Bridging Header
+2. https://parse.com/tutorials/ios-push-notifications
+3. http://whatsmyudid.com/
+4. https://medium.com/@kirualex/cocoapods-with-swift-e6f8ba8f0afc - How to create Bridging Header

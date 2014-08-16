@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6205" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="nx8-ip-D7m">
     <dependencies>
+        <deployment defaultVersion="1792" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6198"/>
         <capability name="Constraints with attributes relative to the layout margin" minToolsVersion="6.0"/>
     </dependencies>
@@ -109,6 +110,36 @@
             </objects>
             <point key="canvasLocation" x="952" y="136"/>
         </scene>
+        <!--Notification-->
+        <scene sceneID="0ho-Dq-lsC">
+            <objects>
+                <viewController id="uTm-Lg-sgw" customClass="NotificationViewController" customModule="UserManDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Aa6-47-YSl"/>
+                        <viewControllerLayoutGuide type="bottom" id="GeB-Pw-Ye1"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="lae-iq-Ssq">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GVV-eA-ASO">
+                                <rect key="frame" x="16" y="513" width="120" height="30"/>
+                                <state key="normal" title="Send Notification">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="sendNotification:" destination="uTm-Lg-sgw" eventType="touchUpInside" id="KdV-E5-2K5"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Notification" id="WjG-4C-q8f"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UJ9-a3-fT4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="952" y="677"/>
+        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Qoc-Fh-wk9">
             <objects>
@@ -121,6 +152,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="Am3-Lb-xaZ"/>
+                        <segue destination="uTm-Lg-sgw" kind="relationship" relationship="viewControllers" id="X0b-FK-6Kr"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nt3-d5-Nm1" userLabel="First Responder" sceneMemberID="firstResponder"/>

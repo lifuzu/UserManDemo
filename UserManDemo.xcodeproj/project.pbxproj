@@ -24,6 +24,7 @@
 		629ACB5719954C8A00363D3B /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 629ACB4D19954C8A00363D3B /* Security.framework */; };
 		629ACB5819954C8A00363D3B /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 629ACB4E19954C8A00363D3B /* StoreKit.framework */; };
 		629ACB5919954C8A00363D3B /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 629ACB4F19954C8A00363D3B /* SystemConfiguration.framework */; };
+		62AF34FB199F0E3C0015976B /* NotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62AF34FA199F0E3C0015976B /* NotificationViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		629ACB4E19954C8A00363D3B /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		629ACB4F19954C8A00363D3B /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		629ACB5A19954D6600363D3B /* UserManDemo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UserManDemo-Bridging-Header.h"; sourceTree = "<group>"; };
+		62AF34FA199F0E3C0015976B /* NotificationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +121,7 @@
 				629ACB2519954B7E00363D3B /* UserManDemo.xcdatamodeld */,
 				629ACB2119954B7E00363D3B /* Supporting Files */,
 				629ACB5A19954D6600363D3B /* UserManDemo-Bridging-Header.h */,
+				62AF34FA199F0E3C0015976B /* NotificationViewController.swift */,
 			);
 			path = UserManDemo;
 			sourceTree = "<group>";
@@ -215,6 +218,7 @@
 				TargetAttributes = {
 					629ACB1D19954B7E00363D3B = {
 						CreatedOnToolsVersion = 6.0;
+						DevelopmentTeam = 7RAR9E88NY;
 					};
 					629ACB3219954B7E00363D3B = {
 						CreatedOnToolsVersion = 6.0;
@@ -267,6 +271,7 @@
 			files = (
 				629ACB2919954B7E00363D3B /* ViewController.swift in Sources */,
 				629ACB2719954B7E00363D3B /* UserManDemo.xcdatamodeld in Sources */,
+				62AF34FB199F0E3C0015976B /* NotificationViewController.swift in Sources */,
 				629ACB2419954B7E00363D3B /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -318,7 +323,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Fuzu Li (NGHHECB225)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Fuzu Li (NGHHECB225)";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -361,7 +367,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Fuzu Li (NGHHECB225)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Fuzu Li (NGHHECB225)";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -386,11 +393,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Fuzu Li (NGHHECB225)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = UserManDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "UserManDemo/UserManDemo-Bridging-Header.h";
@@ -404,11 +413,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Fuzu Li (NGHHECB225)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = UserManDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "UserManDemo/UserManDemo-Bridging-Header.h";
@@ -468,6 +479,7 @@
 				629ACB3F19954B7E00363D3B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		629ACB4019954B7E00363D3B /* Build configuration list for PBXNativeTarget "UserManDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -476,6 +488,7 @@
 				629ACB4219954B7E00363D3B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
