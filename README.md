@@ -46,8 +46,6 @@ Then paste the following inside the application:didFinishLaunchingWithOptions: f
               clientKey:@"3N50GOgF8pJgMEa2LV7F6KWcM283Dp4FZasuqL1r"];
 ```
 
-Open the workspace using Xcode 6 Beta 5
-```
 *7*. And to track statistics around application opens, add the following below that:
 ```
 [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
