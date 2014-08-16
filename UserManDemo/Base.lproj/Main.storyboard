@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6205" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6205" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="nx8-ip-D7m">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6198"/>
         <capability name="Constraints with attributes relative to the layout margin" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--User Management-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="UserManDemo" customModuleProvider="target" sceneMemberID="viewController">
@@ -98,6 +98,7 @@
                             <constraint firstItem="FXT-th-VWE" firstAttribute="leading" secondItem="z3x-sX-Txe" secondAttribute="leading" id="yg6-Vu-BHd"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="User Management" id="dca-N4-If4"/>
                     <connections>
                         <outlet property="labelUserName" destination="nKV-rH-pwA" id="wbW-hg-NWa"/>
                         <outlet property="textFieldPassword" destination="2nl-bY-yvQ" id="Iwx-rV-jUA"/>
@@ -106,6 +107,25 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="952" y="136"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="Qoc-Fh-wk9">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="nx8-ip-D7m" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="Nzt-Ea-FXn">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="Am3-Lb-xaZ"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Nt3-d5-Nm1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="140" y="136"/>
         </scene>
     </scenes>
 </document>
