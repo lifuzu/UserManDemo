@@ -17,7 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication!, didFinishLaunchingWithOptions launchOptions: NSDictionary!) -> Bool {
         // Override point for customization after application launch.
-        Parse.setApplicationId("yoNwmACNsilxWoqlLXwnOEMAdc2xZgrTrAPaAVe2", clientKey: "zfMwc5eytgkDIYgB4dEFtxQHSL25PchXeQ8hk1V7")
+        Parse.setApplicationId("PASTE YOUR APPLICATION ID HERE", clientKey: "PASTE YOUR CLIENT KEY HERE")
         PFUser.enableAutomaticUser()
         
         var defaultACL = PFACL.ACL()
