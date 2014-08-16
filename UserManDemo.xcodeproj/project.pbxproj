@@ -25,6 +25,7 @@
 		629ACB5819954C8A00363D3B /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 629ACB4E19954C8A00363D3B /* StoreKit.framework */; };
 		629ACB5919954C8A00363D3B /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 629ACB4F19954C8A00363D3B /* SystemConfiguration.framework */; };
 		62AF34FB199F0E3C0015976B /* NotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62AF34FA199F0E3C0015976B /* NotificationViewController.swift */; };
+		62AF34FD199FC2940015976B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62AF34FC199FC2940015976B /* UIKit.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,7 @@
 		629ACB4F19954C8A00363D3B /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		629ACB5A19954D6600363D3B /* UserManDemo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UserManDemo-Bridging-Header.h"; sourceTree = "<group>"; };
 		62AF34FA199F0E3C0015976B /* NotificationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationViewController.swift; sourceTree = "<group>"; };
+		62AF34FC199FC2940015976B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				62AF34FD199FC2940015976B /* UIKit.framework in Frameworks */,
 				629ACB5019954C8A00363D3B /* AudioToolbox.framework in Frameworks */,
 				629ACB5119954C8A00363D3B /* CFNetwork.framework in Frameworks */,
 				629ACB5219954C8A00363D3B /* CoreGraphics.framework in Frameworks */,
@@ -116,12 +119,12 @@
 			children = (
 				629ACB2319954B7E00363D3B /* AppDelegate.swift */,
 				629ACB2819954B7E00363D3B /* ViewController.swift */,
+				62AF34FA199F0E3C0015976B /* NotificationViewController.swift */,
 				629ACB2A19954B7E00363D3B /* Main.storyboard */,
 				629ACB2D19954B7E00363D3B /* Images.xcassets */,
 				629ACB2519954B7E00363D3B /* UserManDemo.xcdatamodeld */,
 				629ACB2119954B7E00363D3B /* Supporting Files */,
 				629ACB5A19954D6600363D3B /* UserManDemo-Bridging-Header.h */,
-				62AF34FA199F0E3C0015976B /* NotificationViewController.swift */,
 			);
 			path = UserManDemo;
 			sourceTree = "<group>";
@@ -154,6 +157,7 @@
 		629ACB4519954BD100363D3B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				62AF34FC199FC2940015976B /* UIKit.framework */,
 				629ACB4619954C8A00363D3B /* AudioToolbox.framework */,
 				629ACB4719954C8A00363D3B /* CFNetwork.framework */,
 				629ACB4819954C8A00363D3B /* CoreGraphics.framework */,

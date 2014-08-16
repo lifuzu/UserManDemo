@@ -10,7 +10,7 @@ import UIKit
 import CoreData
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, UIAlertViewDelegate {
                             
     var window: UIWindow?
 
@@ -40,17 +40,57 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         currentInstallation.saveInBackground()
     }
 
+    func application(application: UIApplication!, didFailToRegisterForRemoteNotificationsWithError error: NSError!) {
+        NSLog(error.localizedDescription)
+    }
+
     func application(application: UIApplication!, didReceiveRemoteNotification userInfo: NSDictionary!) {
 
-        /*var notification:NSDictionary = userInfo.objectForKey("aps") as NSDictionary
+        var notification = userInfo.objectForKey("d") as NSDictionary
 
-        if notification.objectForKey("content-available"){
-            if notification.objectForKey("content-available").isEqualToNumber(1){
+        // UIApplicationState state = [application applicationState];
+        if notification != nil { /* .objectForKey("a"){
+            if notification.objectForKey("a").isEqualToNumber(1){
+                NSLog("Received Notification!")
                 NSNotificationCenter.defaultCenter().postNotificationName("reloadTimeline", object: nil)
+            }*/
+            NSLog("Received Notification!")
+            NSNotificationCenter.defaultCenter().postNotificationName("notification", object: nil)
+//            let notificationViewController = NotificationViewController(coder: nil)
+            NSLog(notification.description)
+            // Reference: http://stackoverflow.com/questions/20757362/open-a-view-controller-when-a-ios-push-notification-is-received
+            // Reference: http://stackoverflow.com/questions/15598433/run-a-function-after-push-notification
+            /*var alert = UIAlertView(title: "Received Notification", message: notification.description, delegate: self, cancelButtonTitle: "Cancel")
+            alert.show()*/
+            if nil != NSClassFromString("UIAlertController") {
+                let alert = UIAlertController(title: "Title", message: notification.description, preferredStyle: UIAlertControllerStyle.Alert)
+                alert.addAction(UIAlertAction(title: "Button", style: UIAlertActionStyle.Default, handler: nil))
+                self.window!.rootViewController.presentViewController(alert, animated: true, completion: nil)
+                // Reference: http://stackoverflow.com/questions/24022479/how-would-i-create-a-uialertview-in-swift - how to add handler
+            } else {
+                let alert = UIAlertView(title: "Received Notification", message: notification.description, delegate: self, cancelButtonTitle: "Cancel")
+                alert.addButtonWithTitle("View")
+                alert.show()
             }
-        }else{*/
+//
+//            // Open the Notification View
+//            self.window!.rootViewController.presentViewController(notificationViewController, animated: true, completion: nil)
+        } else {
             PFPush.handlePush(userInfo)
-        //}
+        }
+    }
+
+    func alertView(alertView: UIAlertView!, clickedButtonAtIndex buttonIndex: Int) {
+        if (buttonIndex == 0)
+        {
+            // Cancel, do something
+            NSLog("Cancel: ")
+        }
+        else if (buttonIndex == 1)
+        {
+            // View
+            NSLog("View: " )
+        }
     }
 
     func applicationWillResignActive(application: UIApplication!) {
