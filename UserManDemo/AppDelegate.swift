@@ -46,7 +46,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UIAlertViewDelegate {
 
     func application(application: UIApplication!, didReceiveRemoteNotification userInfo: NSDictionary!) {
 
-        var notification = userInfo.objectForKey("d") as NSDictionary
+        var notification = userInfo.objectForKey("d") as? NSDictionary
 
         // UIApplicationState state = [application applicationState];
         if notification != nil { /* .objectForKey("a"){
@@ -57,18 +57,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UIAlertViewDelegate {
             NSLog("Received Notification!")
             NSNotificationCenter.defaultCenter().postNotificationName("notification", object: nil)
 //            let notificationViewController = NotificationViewController(coder: nil)
-            NSLog(notification.description)
+            NSLog(notification!.description)
             // Reference: http://stackoverflow.com/questions/20757362/open-a-view-controller-when-a-ios-push-notification-is-received
             // Reference: http://stackoverflow.com/questions/15598433/run-a-function-after-push-notification
             /*var alert = UIAlertView(title: "Received Notification", message: notification.description, delegate: self, cancelButtonTitle: "Cancel")
             alert.show()*/
             if nil != NSClassFromString("UIAlertController") {
-                let alert = UIAlertController(title: "Title", message: notification.description, preferredStyle: UIAlertControllerStyle.Alert)
+                let alert = UIAlertController(title: "Title", message: notification!.description, preferredStyle: UIAlertControllerStyle.Alert)
                 alert.addAction(UIAlertAction(title: "Button", style: UIAlertActionStyle.Default, handler: nil))
                 self.window!.rootViewController.presentViewController(alert, animated: true, completion: nil)
                 // Reference: http://stackoverflow.com/questions/24022479/how-would-i-create-a-uialertview-in-swift - how to add handler
             } else {
-                let alert = UIAlertView(title: "Received Notification", message: notification.description, delegate: self, cancelButtonTitle: "Cancel")
+                let alert = UIAlertView(title: "Received Notification", message: notification!.description, delegate: self, cancelButtonTitle: "Cancel")
                 alert.addButtonWithTitle("View")
                 alert.show()
             }
